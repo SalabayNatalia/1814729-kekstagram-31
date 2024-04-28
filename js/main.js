@@ -1,7 +1,8 @@
 import './functions.js';
-import { photoArray } from './photos.js';
 import { getMiniatures } from './getMiniatures.js';
+import { openPhotoPopup, closePhotoPopup } from './getPhotoPopup.js';
 
-// console.log(photoArray());
-console.log(getMiniatures());
+// console.log(getMiniatures());
 getMiniatures();
+openPhotoPopup();
+closePhotoPopup();

@@ -1,4 +1,5 @@
 import { photoArray } from './photos.js';
+import { openPhotoPopup } from './getPhotoPopup.js';
 
 const pictureTemplate = document.querySelector('#picture').content.querySelector('.picture');
 const picturecContainer = document.querySelector('.pictures');
@@ -15,6 +16,10 @@ const getMiniatures = function () {
     pictureElement.querySelector('.picture__img').alt = miniature.description;
     pictureElement.querySelector('.picture__likes').textContent = miniature.likes;
     pictureElement.querySelector('.picture__comments').textContent = miniature.comments.length;
+
+    pictureElement.addEventListener('click', () => {
+      openPhotoPopup(miniature);
+    });
 
     miniatureFragment.appendChild(pictureElement);
   });
